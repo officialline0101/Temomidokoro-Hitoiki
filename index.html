@@ -987,11 +987,6 @@
 
         <input type="text" id="name" placeholder="お名前を入力してください" oninput="saveInput('name')">
 
-        <div class="label">クーポン適応</div>
-        <div class="visit-buttons">
-            <button type="button" id="couponApply" onclick="toggleCoupon(this)">クーポン適応する</button>
-        </div>
-
         <div class="label">性別<span class="required">必須</span></div>
         <div class="visit-buttons">
             <button type="button" id="firstVisit" onclick="selectVisit(this)">男性</button>
@@ -1295,11 +1290,6 @@
         <div class="info-row">
             <p><span style="color:#ffa0b8;"><strong>【お名前】</strong></span><br>・${name}</p>
             <button class="edit-button" onclick="scrollToElement('name')">修正</button>
-        </div>
-        <hr>
-        <div class="info-row">
-            <p>${couponText}</p>
-            <button class="edit-button" onclick="scrollToElement('couponApply')">修正</button>
         </div>
         <hr>
         <div class="info-row">
@@ -1837,7 +1827,6 @@ function submitForm() {
     const sendText =
         `【予約フォーム】\n` +
         `《お名前》${formData.name}\n` +
-        `《クーポン適応》${formData.couponApplied}\n` +
         `《性別》${formData.visitCount}\n` +
         `《来店回数》${formData.selectedMenu}\n\n` +
         `《メニュー》\n・${formData.selectedSymptom}\n` +
